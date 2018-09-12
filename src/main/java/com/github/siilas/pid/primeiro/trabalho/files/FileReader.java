@@ -31,5 +31,16 @@ public class FileReader {
             throw new FilesNotFoundException(); 
         }
     }
+    
+    public File readTexture(String fileName) {
+        try {
+            String path = getClass().getResource("/brodatz-textures/" + fileName + ".gif").getPath();
+            File file = new File(path);
+            return file.exists() ? file : null;
+        } catch (Exception e) {
+            log.error("Erro ao buscar texturas", e);
+            throw new FilesNotFoundException(); 
+        }
+    }
 
 }
