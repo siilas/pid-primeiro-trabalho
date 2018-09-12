@@ -17,5 +17,13 @@ public final class ImageUtils {
     public static void setRBG(BufferedImage image, int width, int height, Color color) {
         image.setRGB(width, height, color.getRGB());
     }
+    
+    public static int getGray(BufferedImage image, int width, int height) {
+        return getRBG(image, width, height).getGray();
+    }
+    
+    public static Color getFromGray(int gray) {
+        return new Color(gray, gray, gray);
+    }
 
 }

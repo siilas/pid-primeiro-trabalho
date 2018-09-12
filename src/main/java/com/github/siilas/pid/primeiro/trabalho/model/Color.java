@@ -9,7 +9,11 @@ public class Color extends java.awt.Color {
     }
     
     public Color(java.awt.Color color) {
-        super(color.getRed(), color.getBlue(), color.getBlue());
+        super(color.getRed(), color.getGreen(), color.getBlue());
+    }
+    
+    public Color(int red, int green, int blue) {
+        super(red, green, blue);
     }
 
     public int getGray() {
