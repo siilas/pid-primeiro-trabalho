@@ -42,12 +42,12 @@ public class LBPTest {
         boolean[][] treeshold = lbp.verificarPixelsAoRedor(image, new Color(Color.RED).getGray(), 1, 1);
         Assert.assertEquals(true, treeshold[0][0]);
         Assert.assertEquals(true, treeshold[0][1]);
-        Assert.assertEquals(true, treeshold[0][2]);
+        Assert.assertEquals(false, treeshold[0][2]);
         Assert.assertEquals(true, treeshold[1][0]);
         Assert.assertEquals(false, treeshold[1][1]);
-        Assert.assertEquals(true, treeshold[1][2]);
-        Assert.assertEquals(false, treeshold[2][0]);
-        Assert.assertEquals(false, treeshold[2][1]);
+        Assert.assertEquals(false, treeshold[1][2]);
+        Assert.assertEquals(true, treeshold[2][0]);
+        Assert.assertEquals(true, treeshold[2][1]);
         Assert.assertEquals(false, treeshold[2][2]);
     }
     

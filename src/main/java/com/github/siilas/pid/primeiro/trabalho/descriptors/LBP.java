@@ -19,17 +19,19 @@ public class LBP implements Descriptible {
             { 128, 0, 8 },
             { 64, 32, 16 }
     };
-
+    
     @Override
     public void getTextureDescriptor(BufferedImage image) {
+        BufferedImage lbpimage = ImageUtils.copy(image);
         int[] histograma = new int[256];
         int width = image.getWidth();
         int height = image.getHeight();
-        for (int linha = 1; linha < height; linha++) {
-            for (int coluna = 1; coluna < width; coluna++) {
+        for (int linha = 1; linha < (height - 1); linha++) {
+            for (int coluna = 1; coluna < (width - 1); coluna++) {
                 int cor = ImageUtils.getGray(image, linha, coluna);
                 boolean[][] treeshold = verificarPixelsAoRedor(image, cor, linha, coluna);
                 int lbpValue = getLBPValue(treeshold);
+                ImageUtils.setRBG(lbpimage, linha, coluna, lbpValue);
                 histograma[lbpValue] += 1;
             }
         }
