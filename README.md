@@ -36,3 +36,13 @@ Precisão	x	Revocação;
 
 **7)** Diga qual	método	de	descrição	de	textura	obteve	o	melhor	desempenho	
 para	a	Recuperação	de	Imagens de	texturas	do	álbum	de	Brodatz.
+
+### Build e execução:
+
+Para fazer o build e executar o projeto execute o seguinte comando na pasta raiz do projeto:
+
+```
+./mvnw clean package spring-boot:run
+```
+
+
