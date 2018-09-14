@@ -33,10 +33,10 @@ public final class ImageUtils {
     }
     
     public static BufferedImage copy(BufferedImage image) {
-        ColorModel cm = image.getColorModel();
-        boolean isAlphaPremultiplied = cm.isAlphaPremultiplied();
+        ColorModel colorModel = image.getColorModel();
+        boolean isAlphaPremultiplied = colorModel.isAlphaPremultiplied();
         WritableRaster raster = image.copyData(image.getRaster().createCompatibleWritableRaster());
-        return new BufferedImage(cm, raster, isAlphaPremultiplied, null);
+        return new BufferedImage(colorModel, raster, isAlphaPremultiplied, null);
     }
 
 }

@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 import org.springframework.stereotype.Component;
 
 import com.github.siilas.pid.primeiro.trabalho.enums.Descriptor;
+import com.github.siilas.pid.primeiro.trabalho.results.LBPResult;
 import com.github.siilas.pid.primeiro.trabalho.utils.ImageUtils;
 
 /**
@@ -20,8 +21,7 @@ public class LBP implements Descriptible {
             { 64, 32, 16 }
     };
     
-    @Override
-    public void getTextureDescriptor(BufferedImage image) {
+    public LBPResult getTextureDescriptor(BufferedImage image) {
         BufferedImage lbpimage = ImageUtils.copy(image);
         int[] histograma = new int[256];
         int width = image.getWidth();
@@ -35,6 +35,10 @@ public class LBP implements Descriptible {
                 histograma[lbpValue] += 1;
             }
         }
+        return LBPResult.builder()
+                .image(lbpimage)
+                .histograma(histograma)
+                .build();
     }
 
     @Override

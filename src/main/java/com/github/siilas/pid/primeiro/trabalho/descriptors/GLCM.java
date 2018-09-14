@@ -13,7 +13,6 @@ import com.github.siilas.pid.primeiro.trabalho.enums.Descriptor;
 @Component
 public class GLCM implements Descriptible {
 
-    @Override
     public void getTextureDescriptor(BufferedImage image) {
         
     }

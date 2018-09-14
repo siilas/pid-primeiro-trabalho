@@ -1,5 +1,7 @@
 package com.github.siilas.pid.primeiro.trabalho.calculos;
 
+import java.util.List;
+
 import com.github.siilas.pid.primeiro.trabalho.results.PrecisionRecallResult;
 
 /**
@@ -43,9 +45,10 @@ public class PrecisionRecall {
                 .build();
     }
 
-    public void calcularMedia() {
+    public void calcularMedia(List<PrecisionRecallResult> resultados) {
         // Olhar
         // - https://github.com/rap1ds/information-retrieval/blob/master/src/ir_course/PrecisionRecallCalculator.java
+        // - https://introcs.cs.princeton.edu/java/32class/Histogram.java.html
     }
 
 }

@@ -13,7 +13,6 @@ import com.github.siilas.pid.primeiro.trabalho.enums.Descriptor;
 @Component
 public class WLD implements Descriptible {
 
-    @Override
     public void getTextureDescriptor(BufferedImage image) {
         
     }
