@@ -42,7 +42,7 @@ para	a	Recuperação	de	Imagens de	texturas	do	álbum	de	Brodatz.
 Para fazer o build e executar o projeto execute o seguinte comando na pasta raiz do projeto:
 
 ```
-./mvnw clean package spring-boot:run
+./mvnw clean install spring-boot:run
 ```
 
 
