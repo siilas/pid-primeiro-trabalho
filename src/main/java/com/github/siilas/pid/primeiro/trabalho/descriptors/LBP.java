@@ -23,7 +23,7 @@ public class LBP implements Descriptible {
     
     public LBPResult getTextureDescriptor(BufferedImage image) {
         BufferedImage lbpimage = ImageUtils.copy(image);
-        int[] histograma = new int[256];
+        double[] histograma = new double[256];
         int width = image.getWidth();
         int height = image.getHeight();
         for (int linha = 1; linha < (height - 1); linha++) {

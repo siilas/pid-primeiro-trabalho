@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class PrecisionRecallResult {
+public class PrecisionRecall {
 
     private double recall;
     private double precision;

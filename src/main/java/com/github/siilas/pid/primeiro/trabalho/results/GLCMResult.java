@@ -11,11 +11,16 @@ import lombok.Setter;
 @Setter
 @Builder
 @EqualsAndHashCode(of = "id")
-public class LBPResult {
+public class GLCMResult {
 
 	private String id;
 	private String clazz;
     private double[] histograma;
-    private BufferedImage image;
-    
+    private BufferedImage image;	
+    double contrast;
+	double homogenity;
+	double entropy;
+	double energy;
+	double dissimilarity;
+	
 }
